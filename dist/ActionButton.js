@@ -28,6 +28,10 @@ var defaultProps = {
 	url: null
 };
 
+var propTypes = {
+	children: _propTypes2.default.node
+};
+
 var Component = function (_React$Component) {
 	_inherits(Component, _React$Component);
 
@@ -84,6 +88,7 @@ var Component = function (_React$Component) {
 }(_react2.default.Component);
 
 Component.displayName = 'PopupAction';
+Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
 
 exports.default = Component;
