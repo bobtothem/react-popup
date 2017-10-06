@@ -7,10 +7,6 @@ const defaultProps = {
 	url: null,
 };
 
-const propTypes = {
-	children: PropTypes.node.isRequired,
-};
-
 class Component extends React.Component {
 
 	constructor(props) {
@@ -38,8 +34,8 @@ class Component extends React.Component {
 		}
 
 		return (
-			<button onClick={() => this.handleClick()} className={className} dangerouslySetInnerHTML={{ __html: 'html<br />html' }}>
-				{'text'}
+			<button onClick={() => this.handleClick()} className={className} dangerouslySetInnerHTML={this.props.html ? { __html: this.props.html } : null}>
+				{this.props.html ? null : this.props.children}
 			</button>
 		);
 	}
@@ -47,7 +43,6 @@ class Component extends React.Component {
 }
 
 Component.displayName = 'PopupAction';
-Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
 
 export default Component;
