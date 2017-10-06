@@ -7,6 +7,10 @@ const defaultProps = {
 	url: null,
 };
 
+const propTypes = {
+	children: PropTypes.node,
+};
+
 class Component extends React.Component {
 
 	constructor(props) {
@@ -43,6 +47,7 @@ class Component extends React.Component {
 }
 
 Component.displayName = 'PopupAction';
+Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
 
 export default Component;
