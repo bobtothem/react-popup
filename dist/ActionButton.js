@@ -28,10 +28,6 @@ var defaultProps = {
 	url: null
 };
 
-var propTypes = {
-	children: _propTypes2.default.node.isRequired
-};
-
 var Component = function (_React$Component) {
 	_inherits(Component, _React$Component);
 
@@ -78,8 +74,8 @@ var Component = function (_React$Component) {
 				'button',
 				{ onClick: function onClick() {
 						return _this2.handleClick();
-					}, className: className },
-				this.props.children
+					}, className: className, dangerouslySetInnerHTML: this.props.html ? { __html: this.props.html } : null },
+				this.props.html ? null : this.props.children
 			);
 		}
 	}]);
@@ -88,7 +84,6 @@ var Component = function (_React$Component) {
 }(_react2.default.Component);
 
 Component.displayName = 'PopupAction';
-Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
 
 exports.default = Component;
