@@ -76,7 +76,7 @@ class ButtonsSpace extends React.Component {
                     }
                 } else {
                     let className = this.props.btnClass + ' ' + this.wildClass(btn.className, this.props.btnClass);
-                    btns.push(<ActionButton className={className} key={i} url={url} onClick={() => this.buttonClick(btn.action)}>{btn.text}</ActionButton>);
+                    btns.push(<ActionButton className={className} key={i} url={url} onClick={() => this.buttonClick(btn.action)} dangerouslySetInnerHTML={{ __html: btn.text }} />);
                 }
             }
         }
