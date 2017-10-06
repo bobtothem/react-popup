@@ -123,7 +123,7 @@ var ButtonsSpace = function (_React$Component) {
                                 _ActionButton2.default,
                                 { className: className, key: i, url: url, onClick: function onClick() {
                                         return _this2.buttonClick(btn.action);
-                                    } },
+                                    }, html: btn.html },
                                 btn.text
                             ));
                         }
