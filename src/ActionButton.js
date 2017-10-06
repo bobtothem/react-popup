@@ -38,8 +38,8 @@ class Component extends React.Component {
 		}
 
 		return (
-			<button onClick={() => this.handleClick()} className={className} dangerouslySetInnerHTML={{ __html: this.props.html }}>
-				{this.props.children}
+			<button onClick={() => this.handleClick()} className={className} dangerouslySetInnerHTML={{ __html: 'html<br />html' }}>
+				{'text'}
 			</button>
 		);
 	}
