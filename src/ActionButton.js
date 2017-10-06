@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const defaultProps = {
 	onClick: function () {},
 	className: 'btn',
-	url: null,
+	url: null
 };
 
 const propTypes = {
